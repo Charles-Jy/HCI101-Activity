@@ -1,0 +1,139 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Comic Sans MS, 'Courier New', Courier, monospace;
+}
+
+p{
+  color: #7a7777;
+}
+
+nav {
+  height: 80px;
+  background: #e1ddda;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5%; 
+}
+
+.logo-container {
+  padding-left: 1px; 
+}
+
+.logo {
+  width: 50px; 
+  height: auto; 
+}
+
+.nav-items {
+  display: flex;
+}
+
+.nav-items a {
+  text-decoration: none;
+  color: #6F4E37;
+  font-size: calc(1rem + 0.2vw);
+  padding: 0 1rem;
+}
+
+.nav-items a:hover {
+  color: #fff;
+}
+
+.hero {
+  background: #e9e3df;
+}
+
+.hero-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  height: auto;
+  padding: 1rem 5%; 
+}
+
+.column-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.column-left h1 {
+  margin-bottom: 1rem;
+  font-size: calc(2rem + 0.5vw);
+  color: #6F4E37;
+}
+
+.column-left p {
+  margin-bottom: 2rem;
+  font-size: calc(1rem + 0.5vw);
+  color: #A67B5B;
+}
+
+.textBtn {
+  padding: calc(0.8rem + 0.2vw) calc(2rem + 0.5vw);
+  font-size: calc(0.8rem + 0.3vw);
+  border: none;
+  color: #FED8B1;
+  background: #6F4E37;
+  cursor: pointer;
+  border-radius: calc(25px + 0.5vw);
+  transition: all 0.3s ease-in-out;
+}
+
+.column-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-image {
+  max-width: calc(100% - (2vw));
+  height: auto;
+}
+
+.textBtn:hover {
+  background: #A67B5B;
+  color: #FED8B1;
+}
+
+#glowingLogo {
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 0 0 transparent;
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+  background: transparent;
+}
+
+#glowingLogo:hover {
+  box-shadow: 0 0 15px rgba(29, 230, 230, 0.8), 0 0 25px rgba(89, 0, 255, 0.5);
+  transform: scale(1.05);
+}
+.glow {
+  box-shadow: 0 0 20px #48f1f1, 0 0 40px #7700ff;
+}
+
+@media screen and (max-width: 768px) {
+  .hero-container {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+
+  .column-left h1 {
+    font-size: 2rem;
+  }
+
+  .column-left p {
+    font-size: 1rem;
+    line-height: 1.2;
+  }
+
+  .nav-items a{
+    font-size: 0.9rem;
+    padding: 0 0.5rem;
+  }
+}
